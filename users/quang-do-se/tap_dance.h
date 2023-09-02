@@ -1,11 +1,5 @@
 #pragma once
-
-#include QMK_KEYBOARD_H
-
-#define MODS_SHIFT  (get_mods() & MOD_BIT(KC_LSFT) || get_mods() & MOD_BIT(KC_RSFT))
-#define MODS_CTRL  (get_mods() & MOD_BIT(KC_LCTL) || get_mods() & MOD_BIT(KC_RCTL))
-#define MODS_ALT  (get_mods() & MOD_BIT(KC_LALT) || get_mods() & MOD_BIT(KC_RALT))
-#define MODS_GUI  (get_mods() & MOD_BIT(KC_LGUI) || get_mods() & MOD_BIT(KC_RGUI))
+#include "quang-do-se.h"
 
 //Define a type for as many tap dance states as you need
 enum {
@@ -14,26 +8,6 @@ enum {
     TD_SINGLE_HOLD = 2,
     TD_DOUBLE_TAP = 3
 };
-
-enum layers {
-    _BASE,
-    _FUNCTION,
-    _SWITCH,
-    _LAST
-};
-
-const char* layerNames [] = {
-    [_BASE] = "Base",
-    [_FUNCTION] = "Function",
-    [_SWITCH] = "Switch"
-};
-
-enum custom_keys {
-    QD_ESC = SAFE_RANGE,    // default: escape,  shift: ~
-    QD_BASE,                // layout 0
-    QD_FUNCTION             // layout 1
-};
-
 
 //Tap Dance Declarations
 enum tap_dances {
@@ -61,3 +35,8 @@ void td_safe_reboot (tap_dance_state_t *state, void *user_data);
 void td_safe_mute_finished (tap_dance_state_t *state, void *user_data);
 void td_safe_mute_reset (tap_dance_state_t *state, void *user_data);
 
+#define QT_RCTL TD(TD_RCTL_ENT)
+#define QT_LSFT TD(TD_LSFT_CAPS)
+#define QT_FN   TD(TD_FUNCTION_SWITCH)
+#define QT_BOOT TD(TD_BOOT)
+#define QT_MUTE TD(TD_MUTE)
