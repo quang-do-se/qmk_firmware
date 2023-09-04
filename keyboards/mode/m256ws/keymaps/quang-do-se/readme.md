@@ -1,10 +1,14 @@
-# Flash
+g # Flash
 
 - Press `Fn + Super + Backspace` to Reset mode
 
 - `qmk compile -kb mode/m256ws -km quang-do-se && qmk flash -kb mode/m256ws -km quang-do-se`
 
 - Note: the underglow cannot be turned off normally.
+
+# Userspace
+
+- Custom shared code: `qmk_firmware/users/quang-do-se/`
 
 # Notes
 
