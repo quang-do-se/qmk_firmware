@@ -103,6 +103,7 @@ void td_safe_mute_finished(tap_dance_state_t *state, void *user_data) {
 
     switch (td_safe_mute_tap_state.state) {
     case TD_SINGLE_TAP:
+        register_code(KC_MEDIA_PLAY_PAUSE);
         break;
     case TD_SINGLE_HOLD:
         break;
@@ -117,6 +118,7 @@ void td_safe_mute_finished(tap_dance_state_t *state, void *user_data) {
 void td_safe_mute_reset(tap_dance_state_t *state, void *user_data) {
     switch (get_current_dance_state(state)) {
     case TD_SINGLE_TAP:
+        unregister_code(KC_MEDIA_PLAY_PAUSE);
         break;
     case TD_SINGLE_HOLD:
         break;
