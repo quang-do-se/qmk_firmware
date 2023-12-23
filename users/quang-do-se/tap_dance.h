@@ -15,7 +15,9 @@ enum tap_dances {
     TD_LSFT_CAPS,
     TD_FUNCTION_SWITCH,
     TD_BOOT,
-    TD_MUTE
+    TD_MUTE,
+    TD_F11_PLAY,
+    TD_F12_MUTE
 };
 
 
@@ -40,3 +42,5 @@ void td_safe_mute_reset (tap_dance_state_t *state, void *user_data);
 #define QT_FN   TD(TD_FUNCTION_SWITCH)
 #define QT_BOOT TD(TD_BOOT)
 #define QT_MUTE TD(TD_MUTE)
+#define QT_F11  TD(TD_F11_PLAY)
+#define QT_F12  TD(TD_F12_MUTE)

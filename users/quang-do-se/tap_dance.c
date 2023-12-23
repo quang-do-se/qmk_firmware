@@ -6,7 +6,9 @@ tap_dance_action_t tap_dance_actions[] = {
     [TD_LSFT_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
     [TD_MUTE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_safe_mute_finished, td_safe_mute_reset),
     [TD_FUNCTION_SWITCH] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_function_switch_finished, td_function_switch_reset),
-    [TD_BOOT] = ACTION_TAP_DANCE_FN(td_safe_reboot)
+    [TD_BOOT] = ACTION_TAP_DANCE_FN(td_safe_reboot),
+    [TD_F11_PLAY] = ACTION_TAP_DANCE_DOUBLE(KC_F11, KC_MEDIA_PLAY_PAUSE),
+    [TD_F12_MUTE] = ACTION_TAP_DANCE_DOUBLE(KC_F12, KC_MUTE),
 };
 
 // Ref: https://github.com/samhocevar-forks/qmk-firmware/blob/master/docs/feature_tap_dance.md#example-6-using-tap-dance-for-momentary-layer-switch-and-layer-toggle-keys
