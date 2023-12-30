@@ -16,8 +16,7 @@ enum tap_dances {
     TD_FUNCTION_SWITCH,
     TD_BOOT,
     TD_MUTE,
-    TD_F11_PLAY,
-    TD_F12_MUTE
+    TD_RGUI
 };
 
 
