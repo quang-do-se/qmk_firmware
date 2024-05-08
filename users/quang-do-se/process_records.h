@@ -11,5 +11,6 @@ enum custom_keys {
     QD_BASE,                // layout 0
     QD_FUNCTION,            // layout 1
     QD_RGB,                 // layout 2
-    QD_ENTERTAINMENT        // layout 3
+    QD_ENTERTAINMENT,       // layout 3
+    QD_SWITCH               // layout 4
 };
