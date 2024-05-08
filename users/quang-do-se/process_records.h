@@ -10,5 +10,6 @@ enum custom_keys {
     QD_ESC = SAFE_RANGE,    // default: escape,  shift: ~
     QD_BASE,                // layout 0
     QD_FUNCTION,            // layout 1
-    QD_RGB                  // layout 2
+    QD_RGB,                 // layout 2
+    QD_ENTERTAINMENT        // layout 3
 };
