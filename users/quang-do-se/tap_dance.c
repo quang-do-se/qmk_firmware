@@ -1,4 +1,5 @@
 #include "tap_dance.h"
+#include "print.h"
 
 // Tap Dance Definitions
 tap_dance_action_t tap_dance_actions[] = {
@@ -47,19 +48,28 @@ void td_function_switch_finished (tap_dance_state_t *state, void *user_data) {
 
     switch (td_function_switch_tap_state.state) {
     case TD_SINGLE_TAP:
+        print("td function switch: single tap detected");
         layer_on(_FUNCTION);
+        print("td function switch: turn on FUNCTION layer");
         break;
     case TD_SINGLE_HOLD:
+        print("td function switch: single hold detected");
         layer_on(_FUNCTION);
+        print("td function switch: turn on FUNCTION layer");
         break;
     case TD_DOUBLE_TAP:
+        print("td function switch: double tap detected");
         //check to see if the layer is already set
         if (layer_state_is(_SWITCH)) {
+            print("td function switch: current layer is SWITCH");
             //if already set, then switch it off
             layer_off(_SWITCH);
+            print("td function switch: turn off SWITCH layer");
         } else {
+            print("td function switch: current layer is not SWITCH");
             //if not already set, then switch the layer on
             layer_on(_SWITCH);
+            print("td function switch: turn on SWITCH layer");
         }
         break;
     default:
@@ -70,10 +80,14 @@ void td_function_switch_finished (tap_dance_state_t *state, void *user_data) {
 void td_function_switch_reset (tap_dance_state_t *state, void *user_data) {
     switch (td_function_switch_tap_state.state) {
     case TD_SINGLE_TAP:
+        print("td function switch: single tap released");
         layer_off(_FUNCTION);
+        print("td function switch: turn off FUNCTION layer");
         break;
     case TD_SINGLE_HOLD:  // if the key was held down and now is released then switch off the layer
+        print("td function switch: single hold released");
         layer_off(_FUNCTION);
+        print("td function switch: turn off FUNCTION layer");
         break;
     default:
         break;
