@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                  _______,  _______,  KC_UP,    _______,  _______,  _______,  _______,  _______,  KC_UP,    _______,  KC_PGUP,  KC_HOME,  _______,  _______,
                                  _______,  KC_LEFT,  KC_DOWN,  KC_RGHT,  _______,  _______,  _______,  KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_PGDN,  KC_END,             _______,
                                  _______,  _______,  _______,  _______,  _______,  _______,  _______,  KC_MUTE,  KC_VOLD,  KC_VOLU,  KC_UP,                        _______,
-                                 _______,  _______,  _______,                      _______,                                KC_LEFT,  KC_DOWN,  KC_RGHT,            QD_SWITCH
+                                 _______,  _______,  _______,                      KC_MEDIA_PLAY_PAUSE,                    KC_LEFT,  KC_DOWN,  KC_RGHT,            QD_SWITCH
                                  ),
 
     [_RGB] = LAYOUT_60_ansi(
