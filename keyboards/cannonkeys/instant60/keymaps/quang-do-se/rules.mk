@@ -33,7 +33,7 @@ OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE    # Enter lower-power sleep mode when
 
 TAP_DANCE_ENABLE= yes
 
-CONSOLE_ENABLE = yes        # Console for debug
-COMMAND_ENABLE = yes        # Commands for debug and configuration
+CONSOLE_ENABLE = no        # Console for debug
+COMMAND_ENABLE = no        # Commands for debug and configuration
 
 VIA_ENABLE = no

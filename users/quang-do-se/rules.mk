@@ -18,8 +18,8 @@ OPT_DEFS += -DCORTEX_ENABLE_WFI_IDLE=TRUE
 
 TAP_DANCE_ENABLE= yes
 
-CONSOLE_ENABLE = yes         # Console for debug
-COMMAND_ENABLE = yes         # Commands for debug and configuration
+CONSOLE_ENABLE = no         # Console for debug
+COMMAND_ENABLE = no         # Commands for debug and configuration
 
 RGBLIGHT_ENABLE = no        # Disable keyboard RGB underglow (may conflict with VIA)
 VIA_ENABLE = no
