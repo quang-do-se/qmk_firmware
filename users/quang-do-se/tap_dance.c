@@ -48,28 +48,25 @@ void td_function_switch_finished (tap_dance_state_t *state, void *user_data) {
 
     switch (td_function_switch_tap_state.state) {
     case TD_SINGLE_TAP:
-        print("td function switch: single tap detected");
+        print("td function switch: single tap detected\n");
         layer_on(_FUNCTION);
-        print("td function switch: turn on FUNCTION layer");
+        print("td function switch: turn on FUNCTION layer\n");
         break;
     case TD_SINGLE_HOLD:
-        print("td function switch: single hold detected");
+        print("td function switch: single hold detected\n");
         layer_on(_FUNCTION);
-        print("td function switch: turn on FUNCTION layer");
+        print("td function switch: turn on FUNCTION layer\n");
         break;
     case TD_DOUBLE_TAP:
-        print("td function switch: double tap detected");
+        print("td function switch: double tap detected\n");
         //check to see if the layer is already set
         if (layer_state_is(_SWITCH)) {
-            print("td function switch: current layer is SWITCH");
-            //if already set, then switch it off
-            layer_off(_SWITCH);
-            print("td function switch: turn off SWITCH layer");
+            print("td function switch: current layer is SWITCH. Do nothing.\n");
         } else {
-            print("td function switch: current layer is not SWITCH");
+            print("td function switch: current layer is not SWITCH\n");
             //if not already set, then switch the layer on
-            layer_on(_SWITCH);
-            print("td function switch: turn on SWITCH layer");
+            layer_move(_SWITCH);
+            print("td function switch: move to SWITCH layer\n");
         }
         break;
     default:
@@ -80,14 +77,14 @@ void td_function_switch_finished (tap_dance_state_t *state, void *user_data) {
 void td_function_switch_reset (tap_dance_state_t *state, void *user_data) {
     switch (td_function_switch_tap_state.state) {
     case TD_SINGLE_TAP:
-        print("td function switch: single tap released");
+        print("td function switch: single tap released\n");
         layer_off(_FUNCTION);
-        print("td function switch: turn off FUNCTION layer");
+        print("td function switch: turn off FUNCTION layer\n");
         break;
     case TD_SINGLE_HOLD:  // if the key was held down and now is released then switch off the layer
-        print("td function switch: single hold released");
+        print("td function switch: single hold released\n");
         layer_off(_FUNCTION);
-        print("td function switch: turn off FUNCTION layer");
+        print("td function switch: turn off FUNCTION layer\n");
         break;
     default:
         break;
